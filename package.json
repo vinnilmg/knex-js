@@ -1,0 +1,17 @@
+{
+  "name": "knex-js",
+  "version": "1.0.0",
+  "description": "Módulo KNEX-JS Curso JS básico ao avançado.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "knex": "^2.5.0",
+    "mysql2": "^3.5.0"
+  }
+}
