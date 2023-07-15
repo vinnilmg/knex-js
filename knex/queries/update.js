@@ -6,23 +6,23 @@ console.log(updateSQL.toString());
 updateSQL
   .then((data) => {
     console.log(data);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
 
-updateSQL.update({
-  first_name: 'Vinicius',
-  last_name: 'de Lima Gomes',
-  salary: 5643.22,
-  email: 'viniboy.email@mail.com',
-});
+    updateSQL.update({
+      first_name: 'Vinicius',
+      last_name: 'de Lima Gomes',
+      salary: 6325.12,
+      email: 'viniboy.email@mail.com',
+    });
 
-console.log(updateSQL.toString());
+    console.log(updateSQL.toString());
 
-updateSQL
-  .then((data) => {
-    console.log(data);
+    updateSQL
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   })
   .catch((err) => {
     console.log(err);
