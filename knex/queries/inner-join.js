@@ -1,0 +1,21 @@
+const knex = require('../../knex/config/database');
+
+const query = knex('users as u')
+  .select('u.id as uid', 'p.id as pid', 'p.bio', 'u.first_name')
+  .innerJoin('profiles as p', 'u.id', 'p.user_id')
+  .where('first_name', 'like', 'v%')
+  .orderBy('u.first_name', 'desc')
+  .limit(5);
+
+console.log(query.toString());
+
+query
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+  .finally(() => {
+    knex.destroy();
+  });
